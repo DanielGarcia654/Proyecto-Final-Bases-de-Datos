@@ -1,6 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 
-# Create your views here.
+# Crear las vistas aqui
 def home(request):
-    return HttpResponse("¡Hola, mundo!")
+    return render(request, 'reservaciones/home.html')
