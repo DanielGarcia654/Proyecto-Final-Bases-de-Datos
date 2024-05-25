@@ -77,9 +77,11 @@ WSGI_APPLICATION = 'ReservaYa.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.oracle',
-        'NAME': 'localhost:1521/xe',
+        'NAME': 'xe',
         'USER': 'SYSTEM',
         'PASSWORD': 'shadow65424',
+        'HOST': 'localhost',
+        'PORT': '1521',
     }
 }
 

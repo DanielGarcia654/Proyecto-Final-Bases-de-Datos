@@ -22,10 +22,10 @@
             <div class="col-md-8 d-flex flex-column justify-content-center align-items-center bg-light">
                 <h1 class="display-4">CLICK 2 EAT</h1>
                 <div class="d-flex justify-content-around w-50 my-4">
-                    <button class="btn btn-outline-secondary">Iniciar sesión</button>
+                    <a href="{% url 'login' %}" class="btn btn-outline-secondary">Iniciar sesión</a>
                     <a href="{% url 'registro' %}" class="btn btn-outline-secondary">Registrarse</a>
                 </div>
-                <button class="btn btn-secondary btn-lg">Reserva una mesa</button>
+                <a href="{% url 'reservacion' %}" class="btn btn-secondary btn-lg">Reserva una mesa</a>
             </div>
         </div>
     </div>
