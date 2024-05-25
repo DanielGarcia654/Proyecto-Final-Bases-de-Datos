@@ -60,16 +60,15 @@ class RegistroPagos(models.Model):
         return f"Pago {self.id_registropagos} - Monto {self.monto}"
 
 class HistorialReservaciones(models.Model):
-    id_reservacion = models.ForeignKey(Reservacion, on_delete=models.CASCADE, primary_key=True)
-    id_cliente = models.ForeignKey(Cliente, on_delete=models.CASCADE, primary_key=True)
+    id_reservacion = models.ForeignKey('Reservacion', on_delete=models.CASCADE)
+    id_cliente = models.ForeignKey('Cliente', on_delete=models.CASCADE)
     fecha_hora_visita = models.DateTimeField()
     detalles_reservacion = models.TextField(max_length=1000)
 
     class Meta:
         unique_together = (('id_reservacion', 'id_cliente'),)
 
-    def __str__(self):
-        return f"Historial {self.id_reservacion.id_reservacion} - Cliente {self.id_cliente.nombre_cliente}"
+    def _str_(self):
+        return f'{self.id_reservacion} - {self.id_cliente}'
     
     
-
