@@ -15,7 +15,7 @@ class Cliente(models.Model):
     nombre_cliente = models.CharField(max_length=30)
     numero_telefonico = models.CharField(max_length=13)
     correo_electronico = models.EmailField(max_length=254)
-    numero_visitas = models.PositiveIntegerField()
+    numero_visitas = models.PositiveIntegerField(default=0)
 
     def __str__(self):
         return self.nombre_cliente
