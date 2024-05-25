@@ -6,19 +6,21 @@
     <title>Reservaciones</title>
     {% load static %}
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="{% static 'reservaciones/styles.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+    <!-- FUENTE DE GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
 </head>
-<body class="bg-light">
-    <div class="container-fluid">
-        <div class="row vh-100">
-            <div class="col-md-4 d-flex flex-column justify-content-center align-items-center bg-secondary text-white">
-                <div class="text-center mb-5">
-                    <h2>Dejar comentarios</h2>
-                </div>
-                <img src="{% static 'reservaciones/table_image.png' %}" class="img-fluid" alt="Mesa">
+<body>
+    <div class="container-fluid vh-100">
+        <div class="row h-100">
+            <div class="col-md-4 d-flex flex-column justify-content-center align-items-center bg-secondary text-white p-4">
+                <button class="btn btn-custom">Dejar comentarios</button>
+                <img src="{% static 'reservaciones/img/mesaxd.png' %}" class="img-fluid mt-4 custom-img" alt="Mesa">
             </div>
             <div class="col-md-8 d-flex flex-column justify-content-center align-items-center bg-light">
-                <h1 class="display-4">BOOK UR TABLE</h1>
+                <h1 class="display-4">CLICK 2 EAT</h1>
                 <div class="d-flex justify-content-around w-50 my-4">
                     <button class="btn btn-outline-secondary">Iniciar sesión</button>
                     <button class="btn btn-outline-secondary">Registrarse</button>

@@ -1,0 +1,85 @@
+/* styles.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+.col-md-8 {
+    background-color: #fff9e1 !important; /* Ajusta al color deseado */
+}
+
+.bg-secondary {
+    background-color: #ab977f !important; /* Color marrón claro */
+}
+
+.text-white {
+    color: #fff !important;
+}
+
+.display-4 {
+    font-family: "Allura", cursive;
+    font-size: 7rem;
+    color: #6d4c41; /* Color marrón oscuro para el texto */
+    font-weight: 700;
+}
+
+.btn-outline-secondary {
+    background-color: #e9cfaf;
+    border-color: #e4c9b2;
+    color: #6d4c41;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #d3b498;
+    border-color: #d3b498;
+    color: #6d4c41;
+}
+
+.btn-secondary {
+    background-color: #a08458;
+    border-color: #a08458;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #8b704a;
+    border-color: #8b704a;
+}
+
+.btn-custom {
+    background-color: #fff9e1;
+    border: 2px solid #a08458;
+    color: #6d4c41;
+    font-size: 1.25rem;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.btn-custom:hover {
+    background-color: #d3b498;
+    border-color: #8b704a;
+}
+
+.custom-img {
+    max-width: 60%; /* Ajusta el tamaño máximo de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+h1 {
+    color: #333;
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin: 5px 0;
+}
+
+input[type="submit"] {
+    margin-top: 10px;
+}
+
+
