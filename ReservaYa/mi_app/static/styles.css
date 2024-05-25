@@ -113,3 +113,93 @@ input[type="submit"] {
 .registro-container .btn-primary:hover {
     background-color: #b88a5c;
 }
+
+/* Nuevos estilos añadidos para la vista de reserva */
+.reservation-page body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f3e7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.reservation-page .container {
+    position: relative;
+    width: 50%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #f0ead6;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    z-index: 1;
+}
+
+.reservation-page .reservation-form {
+    margin: auto;
+}
+
+.reservation-page h1 {
+    font-size: 2em;
+    color: #5c3c10;
+    margin-bottom: 20px;
+}
+
+.reservation-page form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.reservation-page label {
+    font-size: 1.2em;
+    color: #5c3c10;
+}
+
+.reservation-page input {
+    padding: 10px;
+    border: 1px solid #5c3c10;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.reservation-page button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f8f3e7;
+    color: #5c3c10;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.reservation-page button:hover {
+    background-color: #5c3c10;
+    color: #f8f3e7;
+}
+
+.reservation-page .circle {
+    position: absolute;
+    border-radius: 50%;
+    background-color: #c2b097;
+    z-index: 0;
+}
+
+.reservation-page .circle1 {
+    width: 150px;
+    height: 150px;
+    top: 5%;
+    left: 5%;
+}
+
+.reservation-page .circle2 {
+    width: 100px;
+    height: 100px;
+    bottom: 10%;
+    right: 10%;
+}
