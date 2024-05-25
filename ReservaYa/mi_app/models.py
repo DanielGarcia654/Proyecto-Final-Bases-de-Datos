@@ -23,6 +23,7 @@ class Cliente(models.Model):
 class Reservacion(models.Model):
     id_reservacion = models.AutoField(primary_key=True)
     id_cliente = models.ForeignKey(Cliente, on_delete=models.CASCADE)
+    id_mesa = models.ForeignKey(Mesa, on_delete=models.CASCADE)
     numero_comensales = models.PositiveIntegerField()
     fecha_hora_reserva = models.DateTimeField()
     tipo_reserva = models.CharField(max_length=30)
@@ -59,8 +60,8 @@ class RegistroPagos(models.Model):
         return f"Pago {self.id_registropagos} - Monto {self.monto}"
 
 class HistorialReservaciones(models.Model):
-    id_reservacion = models.ForeignKey(Reservacion, on_delete=models.CASCADE)
-    id_cliente = models.ForeignKey(Cliente, on_delete=models.CASCADE)
+    id_reservacion = models.ForeignKey(Reservacion, on_delete=models.CASCADE, primary_key=True)
+    id_cliente = models.ForeignKey(Cliente, on_delete=models.CASCADE, primary_key=True)
     fecha_hora_visita = models.DateTimeField()
     detalles_reservacion = models.TextField(max_length=1000)
 
