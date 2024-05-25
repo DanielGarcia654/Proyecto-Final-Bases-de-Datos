@@ -23,7 +23,7 @@ class Cliente(models.Model):
 class Reservacion(models.Model):
     id_reservacion = models.AutoField(primary_key=True)
     id_cliente = models.ForeignKey(Cliente, on_delete=models.CASCADE)
-    id_mesa = models.ForeignKey(Mesa, on_delete=models.CASCADE)
+    id_mesa = models.ForeignKey(Mesa, on_delete=models.CASCADE, default=1)  # Proporciona un valor por defecto
     numero_comensales = models.PositiveIntegerField()
     fecha_hora_reserva = models.DateTimeField()
     tipo_reserva = models.CharField(max_length=30)
@@ -31,6 +31,7 @@ class Reservacion(models.Model):
 
     def __str__(self):
         return f"Reservación {self.id_reservacion} - {self.tipo_reserva}"
+
 
 class ClienteFrecuente(models.Model):
     id_cliente = models.OneToOneField(Cliente, on_delete=models.CASCADE, primary_key=True)
