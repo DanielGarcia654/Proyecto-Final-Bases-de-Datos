@@ -1,7 +1,7 @@
 # forms.py
 
 from django import forms
-from .models import Cliente, Reservacion
+from .models import Cliente, Reservacion, ComentarioCalificacion
 
 class RegistroForm(forms.ModelForm):
     class Meta:
@@ -30,4 +30,15 @@ class ReservaForm(forms.ModelForm):
             'id_cliente': forms.HiddenInput(),  # Puedes cambiar esto según sea necesario
             'id_mesa': forms.HiddenInput(),  # Puedes cambiar esto según sea necesario
             'tiempo_estancia_estimado': forms.TextInput(attrs={'placeholder': 'HH:MM:SS'}),
+        }
+
+class ComentarioForm(forms.ModelForm):
+    class Meta:
+        model = ComentarioCalificacion
+        fields = ['id_reservacion', 'id_cliente', 'comentario', 'calificacion']
+        labels = {
+            'id_reservacion': 'Reservación',
+            'id_cliente': 'Cliente',
+            'comentario': 'Comentario',
+            'calificacion': 'Calificación',
         }
